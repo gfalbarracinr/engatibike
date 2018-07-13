@@ -9,11 +9,17 @@ import _ from 'lodash';
 
 const Wrapper = styled.div`
     height: 62vh;
-    width: 100vw;
-
+    width: 60vw;
+    margin-left: 20%;
 `
 
 class Maps extends Component {
+    constructor(props){
+        super(props);
+        this.state={
+            bike: false
+        }
+    }
     componentDidMount(){
         this.props.fetchData()
     }
@@ -24,14 +30,15 @@ class Maps extends Component {
         const { data } = this.props
         return (
         <Wrapper>
+
             <GoogleMapReact
                 onChildClick={this.handleclick}
                 bootstrapURLKeys={{ key:"AIzaSyBWVky7_Kj8hnp-SeDWwghd8X-7r8iI_6o" }}
                 defaultCenter={{
-                    lat: 4.7085,
-                    lng: -74.111
+                    lat: 4.6986861426,
+                    lng: -74.090461879
                   }}
-                defaultZoom={14}
+                defaultZoom={18}
             >
             {
              _.map(data, (value, key) => (
@@ -39,13 +46,12 @@ class Maps extends Component {
                     key={key}
                     lat={value.LAT}
                     lng={value.LONG}
+                    color={Math.floor(Math.random() * 2)}
                 />
                 ))
-            }
-            
-            
-            
+            }         
             </GoogleMapReact>
+            <button onClick={() => this.props.history.push('/ciclovia')}>ciclorutas</button>
         </Wrapper>
         );
     }

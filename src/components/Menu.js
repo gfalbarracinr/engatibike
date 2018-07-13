@@ -16,7 +16,7 @@ const Button = styled.button`
     grid-area: button1;
     cursor: pointer;
     background-color: pink;
-    height: 40%;
+    height: 50px;
 `
 const Button2 = styled(Button)`
     grid-area: button2;

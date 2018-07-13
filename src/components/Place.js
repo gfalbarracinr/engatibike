@@ -11,7 +11,8 @@ const Wrapper = styled.div`
     margin-top: 10%;
 `
 const Img = styled.img`
-    max-width: 600px;
+    width: 500px;
+    height:500px;
     margin-right: 5%;
 `
 class Place extends Component {
