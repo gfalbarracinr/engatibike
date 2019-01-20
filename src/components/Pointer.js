@@ -24,7 +24,7 @@ const style2 ={
 }
 const Pointer = (props) => {
     
-    if (props.color == 1){
+    if (props.color === 1){
         return (
             <div style={style}>
             </div>
