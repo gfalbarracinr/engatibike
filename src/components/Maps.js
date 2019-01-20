@@ -52,6 +52,7 @@ class Maps extends Component {
             }         
             </GoogleMapReact>
             <button onClick={() => this.props.history.push('/ciclovia')}>ciclorutas</button>
+            <button onClick={() => this.props.history.push('/obras')}>ver obras</button>
         </Wrapper>
         );
     }

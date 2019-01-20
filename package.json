@@ -19,9 +19,11 @@
     "react-material-design": "^0.4.3",
     "react-redux": "^5.0.7",
     "react-router-dom": "^4.3.1",
+    "react-sanitized-html": "^2.0.0",
     "react-scripts": "1.1.4",
     "redux": "^4.0.0",
     "redux-thunk": "^2.3.0",
+    "sanitize-html": "^1.20.0",
     "styled-components": "^3.3.3"
   },
   "scripts": {
